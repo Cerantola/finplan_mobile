@@ -8,7 +8,7 @@ import {
   Button,
   TextButton,
   ContentFooter,
-  Input,
+  ContainerInput,
   CloseButton,
   TextClose,
   Logo,
@@ -18,9 +18,11 @@ import {
 import Animated, {Easing} from 'react-native-reanimated';
 import {TapGestureHandler, State} from 'react-native-gesture-handler';
 
-import {background, bg} from '../../assets';
+import {background, bg, bgDark, lock, user} from '../../assets';
 
 import Svg, {Image, Circle, ClipPath} from 'react-native-svg';
+import Input from '../../components/input';
+import FacebookButton from '../../components/facebook';
 
 const {
   Value,
@@ -81,7 +83,7 @@ function runTiming(clock, value, dest) {
 
 const {width, height} = Dimensions.get('window');
 
-function Login({navigation}) {
+export default function Login({navigation}) {
   const buttonOpacity = new Value(1);
 
   const buttonY = interpolate(buttonOpacity, {
@@ -157,7 +159,7 @@ function Login({navigation}) {
           </ClipPath>
 
           <Image
-            href={bg}
+            href={bgDark}
             height={height + 50}
             width={width}
             preserveAspectRatio="xMidYMid slice"
@@ -172,9 +174,11 @@ function Login({navigation}) {
             color={'#fff'}
             opacity={buttonOpacity}
             style={{transform: [{translateY: buttonY}]}}>
-            <TextButton color={'#000'}>Login</TextButton>
+            <TextButton color={'#000'}>Entrar ou cadastrar</TextButton>
           </ButtonAnimated>
         </TapGestureHandler>
+
+        <FacebookButton />
 
         <ButtonAnimated
           color={'#2E71DC'}
@@ -202,8 +206,23 @@ function Login({navigation}) {
             </CloseButtonAnimated>
           </TapGestureHandler>
 
-          <Input placeholder={'E-MAIL'} placeholderTextColor={'black'} />
-          <Input placeholder={'PASSWORD'} placeholderTextColor={'black'} />
+          <ContainerInput>
+            <Input
+              placeholder={'E-mail'}
+              icon={user}
+              value={''}
+              onChangeText={() => {}}
+            />
+          </ContainerInput>
+
+          <ContainerInput>
+            <Input
+              placeholder={'Senha'}
+              icon={lock}
+              value={''}
+              onChangeText={() => {}}
+            />
+          </ContainerInput>
 
           <ButtonAnimated color={'#fff'}>
             <TextButton color={'#000'}>Entrar</TextButton>
@@ -213,5 +232,3 @@ function Login({navigation}) {
     </Container>
   );
 }
-
-export default Login;

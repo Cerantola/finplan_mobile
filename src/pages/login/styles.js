@@ -29,7 +29,7 @@ export const Button = styled.TouchableOpacity`
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 2px gray;
+  /* box-shadow: 2px 2px 2px gray; */
 `;
 
 export const TextButton = styled.Text`
@@ -48,13 +48,9 @@ export const ContentFooter = styled.View`
   justify-content: center;
 `;
 
-export const Input = styled.TextInput`
-  height: 50px;
-  border-radius: 10px;
-  border-width: 0.5px;
-  border-color: rgba(0, 0, 0, 0.5);
+export const ContainerInput = styled.View`
+  /* width: 100%; */
   margin: 5px 50px;
-  padding-left: 10px;
 `;
 
 export const CloseButton = styled.TouchableOpacity`
