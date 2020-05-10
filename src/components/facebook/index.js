@@ -54,7 +54,7 @@ function FacebookButton() {
 
   return (
     <Button onPress={signIn}>
-      <TextButton>Entrar com facebook</TextButton>
+      <TextButton>Entrar com Facebook</TextButton>
     </Button>
   );
 }

@@ -81,7 +81,7 @@ export default function Google() {
 
   return (
     <Button onPress={signIn}>
-      <TextButton>Entrar com gmail</TextButton>
+      <TextButton>Entrar com Google</TextButton>
     </Button>
   );
 }

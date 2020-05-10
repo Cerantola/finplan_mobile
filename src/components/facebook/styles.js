@@ -2,7 +2,6 @@ import styled from 'styled-components/native';
 
 export const Button = styled.TouchableOpacity`
   height: 50px;
-  margin: 5px 50px;
   background-color: #2e71dc;
   border-radius: 10px;
   align-items: center;
@@ -10,7 +9,7 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const TextButton = styled.Text`
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   color: #fff;
 `;

@@ -14,6 +14,7 @@ import {
   Logo,
   Text,
   ContainerButton,
+  ContentButton,
 } from './styles';
 
 import Animated, {Easing} from 'react-native-reanimated';
@@ -186,13 +187,13 @@ export default function Login({navigation}) {
         <ContainerButtonAnimated
           opacity={buttonOpacity}
           style={{transform: [{translateY: buttonY}]}}>
-          <FacebookButton />
-        </ContainerButtonAnimated>
+          <ContentButton>
+            <FacebookButton />
+          </ContentButton>
 
-        <ContainerButtonAnimated
-          opacity={buttonOpacity}
-          style={{transform: [{translateY: buttonY}]}}>
-          <Google />
+          <ContentButton>
+            <Google />
+          </ContentButton>
         </ContainerButtonAnimated>
 
         <ContentFooterAnimated

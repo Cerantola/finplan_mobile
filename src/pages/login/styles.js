@@ -29,11 +29,20 @@ export const Button = styled.TouchableOpacity`
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  /* box-shadow: 2px 2px 2px gray; */
+  box-shadow: 2px 2px 2px #000;
 `;
 
 export const ContainerButton = styled.View`
   width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 45px;
+`;
+
+export const ContentButton = styled.View`
+  flex: 1;
+  padding-horizontal: 5px;
 `;
 
 export const TextButton = styled.Text`
@@ -53,7 +62,6 @@ export const ContentFooter = styled.View`
 `;
 
 export const ContainerInput = styled.View`
-  /* width: 100%; */
   margin: 5px 50px;
 `;
 
