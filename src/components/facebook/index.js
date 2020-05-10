@@ -1,22 +1,19 @@
 import React from 'react';
-import {Text} from 'react-native';
+
 import {
-  LoginButton,
   LoginManager,
   AccessToken,
   GraphRequest,
   GraphRequestManager,
 } from 'react-native-fbsdk';
 
-// import { Container } from './styles';
+import {Button, TextButton} from './styles';
 
 function FacebookButton() {
   const getResponseInfo = (error, result) => {
     if (error) {
-      //Alert for the Error
       alert('Error fetching data: ' + error.toString());
     } else {
-      //response alert
       console.tron.log('dasidoiajs', result);
 
       alert(JSON.stringify(result));
@@ -26,39 +23,39 @@ function FacebookButton() {
     }
   };
 
-  const onLoginFinished = async (error, result) => {
-    if (error) {
+  const signIn = async () => {
+    try {
+      const result = await LoginManager.logInWithPermissions([
+        'public_profile',
+        'email',
+      ]);
+
+      if (result.isCancelled) {
+        alert('Login cancelado');
+      } else {
+        try {
+          const data = await AccessToken.getCurrentAccessToken();
+
+          console.tron.log('data', data);
+
+          const processRequest = new GraphRequest(
+            '/me?fields=name,picture.type(large)',
+            null,
+            getResponseInfo,
+          );
+
+          new GraphRequestManager().addRequest(processRequest).start();
+        } catch (error) {}
+      }
+    } catch (error) {
       alert('Erro ao fazer login: ' + error.message);
-    } else if (result.isCancelled) {
-      alert('Login cancelado');
-    } else {
-      try {
-        const data = await AccessToken.getCurrentAccessToken();
-
-        console.tron.log('data', data);
-
-        const processRequest = new GraphRequest(
-          '/me?fields=name,picture.type(large)',
-          null,
-          getResponseInfo,
-        );
-
-        new GraphRequestManager().addRequest(processRequest).start();
-      } catch (error) {}
     }
   };
 
   return (
-    <LoginButton
-      style={{
-        height: 50,
-        marginHorizontal: 50,
-      }}
-      publishPermissions={['email']}
-      readPermissions={['public_profile']}
-      onLoginFinished={onLoginFinished}
-      onLogoutFinished={() => alert('User logged out')}
-    />
+    <Button onPress={signIn}>
+      <TextButton>Entrar com facebook</TextButton>
+    </Button>
   );
 }
 

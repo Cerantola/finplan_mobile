@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* finplan_mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* finplan_mobileTests.m */; };
 		0D64F3CB8E514A58DE76B18D /* libPods-finplan_mobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE638780C97118BD84A5F92 /* libPods-finplan_mobile-tvOS.a */; };
+		11EAFEA62467D2520084632D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11EAFEA52467D2520084632D /* GoogleService-Info.plist */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -45,6 +46,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* finplan_mobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = finplan_mobileTests.m; sourceTree = "<group>"; };
 		0DE638780C97118BD84A5F92 /* libPods-finplan_mobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-finplan_mobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11EAFEA52467D2520084632D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* finplan_mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finplan_mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = finplan_mobile/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = finplan_mobile/AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		13B07FAE1A68108700A75B9A /* finplan_mobile */ = {
 			isa = PBXGroup;
 			children = (
+				11EAFEA52467D2520084632D /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -341,6 +344,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				11EAFEA62467D2520084632D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,10 +446,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-finplan_mobile-finplan_mobileTests/Pods-finplan_mobile-finplan_mobileTests-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -482,10 +488,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-finplan_mobile/Pods-finplan_mobile-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

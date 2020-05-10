@@ -13,6 +13,7 @@ import {
   TextClose,
   Logo,
   Text,
+  ContainerButton,
 } from './styles';
 
 import Animated, {Easing} from 'react-native-reanimated';
@@ -23,6 +24,7 @@ import {background, bg, bgDark, lock, user} from '../../assets';
 import Svg, {Image, Circle, ClipPath} from 'react-native-svg';
 import Input from '../../components/input';
 import FacebookButton from '../../components/facebook';
+import Google from '../../components/google';
 
 const {
   Value,
@@ -43,6 +45,9 @@ const {
 } = Animated;
 
 const ButtonAnimated = Animated.createAnimatedComponent(Button);
+const ContainerButtonAnimated = Animated.createAnimatedComponent(
+  ContainerButton,
+);
 const ContentAnimated = Animated.createAnimatedComponent(Content);
 const ContentFooterAnimated = Animated.createAnimatedComponent(ContentFooter);
 const CloseButtonAnimated = Animated.createAnimatedComponent(CloseButton);
@@ -178,21 +183,17 @@ export default function Login({navigation}) {
           </ButtonAnimated>
         </TapGestureHandler>
 
-        <FacebookButton />
-
-        <ButtonAnimated
-          color={'#2E71DC'}
+        <ContainerButtonAnimated
           opacity={buttonOpacity}
           style={{transform: [{translateY: buttonY}]}}>
-          <TextButton color={'#fff'}>Entrar com facebook</TextButton>
-        </ButtonAnimated>
+          <FacebookButton />
+        </ContainerButtonAnimated>
 
-        <ButtonAnimated
-          color={'#dd4b39'}
+        <ContainerButtonAnimated
           opacity={buttonOpacity}
           style={{transform: [{translateY: buttonY}]}}>
-          <TextButton color={'#fff'}>Entrar com gmail</TextButton>
-        </ButtonAnimated>
+          <Google />
+        </ContainerButtonAnimated>
 
         <ContentFooterAnimated
           opacity={inputOpacity}

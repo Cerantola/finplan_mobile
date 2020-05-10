@@ -1,6 +1,6 @@
 import Reactotron from 'reactotron-react-native';
 
-console.tron = Reactotron.configure({host: '192.168.15.189'}) // IP LOCAL
+console.tron = Reactotron.configure({host: '192.168.0.16'}) // IP LOCAL
   .useReactNative();
 
 if (__DEV__) {

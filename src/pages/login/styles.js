@@ -32,6 +32,10 @@ export const Button = styled.TouchableOpacity`
   /* box-shadow: 2px 2px 2px gray; */
 `;
 
+export const ContainerButton = styled.View`
+  width: 100%;
+`;
+
 export const TextButton = styled.Text`
   font-size: 16px;
   font-weight: 600;

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1026222133431",
+    "firebase_url": "https://finplan-f9ca6.firebaseio.com",
+    "project_id": "finplan-f9ca6",
+    "storage_bucket": "finplan-f9ca6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026222133431:android:eb740cdc2be62925297d32",
+        "android_client_info": {
+          "package_name": "com.finplan_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026222133431-90if1qli2ujdtfe3916dd72l16ed96fh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finplan_mobile",
+            "certificate_hash": "d5075dfc8e4851ef67d0f6330490c907734f2f31"
+          }
+        },
+        {
+          "client_id": "1026222133431-egfdmlaotlr9vulr86b300elsfb2n7m9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnlKYno5Zl073jVW26B2p-TMbCjUV_PYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026222133431-egfdmlaotlr9vulr86b300elsfb2n7m9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

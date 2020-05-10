@@ -77,6 +77,8 @@ target 'finplan_mobile' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'Firebase/Analytics'
+
   target 'finplan_mobileTests' do
     inherit! :complete
     # Pods for testing

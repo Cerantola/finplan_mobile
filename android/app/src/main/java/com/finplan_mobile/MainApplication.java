@@ -13,6 +13,7 @@ import java.util.List;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
+          // packages.add(new MyReactNativePackage());
           return packages;
         }
 
